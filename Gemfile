@@ -15,6 +15,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   
   gem 'byebug'
+  gem 'sqlite3'
+  gem 'pry'
 end
 
 group :development do
@@ -24,3 +26,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
