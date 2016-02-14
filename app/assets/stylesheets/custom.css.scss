@@ -59,3 +59,24 @@ h2 {
   margin-top: 25px;
   border-top: 1px solid #eaeaea;
 }
+
+.chef_info {
+  margin-top: 20px;
+  
+}
+
+.gravatar {
+  border-radius: 5px;
+  
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto important;
+}
