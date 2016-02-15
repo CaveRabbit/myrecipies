@@ -80,3 +80,18 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto important;
 }
+
+span.picture {
+  margin-top: 10px;
+  input{
+    border: 0;
+  }
+}
+
+.show_recipe {
+  margin: 10px;
+}
+
+.food {
+  size: 10px 10px;
+}
