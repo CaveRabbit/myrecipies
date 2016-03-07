@@ -1,0 +1,21 @@
+<%= render 'shared/errors', obj: @chef %>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_for @chef do |f| %>
+    <%= f.label :chefname%>
+    <%= f.text_field :chefname %>
+    <br/>
+    
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <br/>
+    
+    <%= f.label :password %>
+    <%= f.password_field :password %> 
+    <br/>
+    
+    <%= f.submit(@chef.new_record? ? 'Register' : 'Edit Profile' , class: "btn btn-success")%>
+    <% end %>
+  </div>
+</div>

@@ -6,7 +6,7 @@
     This is the home page for the Professional Ruby on Rails Developer course.
   </h2>
 
-        <%=link_to "Sign Up Now!", "", class:"btn btn-default btn-success"%>
+        <%=link_to "Sign Up Now!", register_path, class:"btn btn-default btn-success"%>
 </div>
 
 <div class="row">
@@ -16,7 +16,15 @@
       View Receipes as Guest User
     </h3>
     <h2 class="left"> Browse and view recipies as a guest and sign up later </h2>
-    <p> <%= link_to "Browse Recipe Listing", recipes_path, class:"btn btn-warning btn-small" %> </p>
+    <p> <%= link_to "Browse Recipe Listing", recipes_path, class:"btn btn-small" %> </p>
+  </div>
+  
+  <div class="col-md-4">
+    <h3 class="midrow">
+      Sign into your account
+    </h3>
+    <h2 class="left"> Add/update your recipes, create reviews, like/dislike your recipes, and more... </h2>
+    <p> <%= link_to "login to your account", login_path, class:"btn btn-small" %> </p>
   </div>
   
   <div class="col-md-4">
@@ -24,15 +32,7 @@
       View Receipes as Guest User
     </h3>
     <h2 class="left"> Browse and view recipies as a guest and sign up later </h2>
-    <p> <%= link_to "Browse Recipe Listing", "", class:"btn btn-warning btn-small" %> </p>
-  </div>
-  
-  <div class="col-md-4">
-    <h3 class="midrow">
-      View Receipes as Guest User
-    </h3>
-    <h2 class="left"> Browse and view recipies as a guest and sign up later </h2>
-    <p> <%= link_to "Browse Recipe Listing", "", class:"btn btn-warning btn-small" %> </p>
+    <p> <%= link_to "Browse Recipe Listing", "", class:"btn btn-small" %> </p>
   </div>
   
 </div>
