@@ -1,7 +1,12 @@
 <%= render 'shared/page_title', title: "All Chefs" %>
 
+<ul class="nav nav-tabs">
+  <li role="presentation"> <%= link_to "Recipes", recipes_path %></li>
+  <li role="presentation" class="active"><%= link_to "chefs", chefs_path %></li>
+</ul>
+
 <div class="row">
-  <div class="col-lg-6 pull-right">
+  <div class="col-lg-6">
     <%= will_paginate %>
   </div>
 </div>
@@ -14,7 +19,7 @@
         <h5>Chef name: <%= chef.chefname %></h5> 
       </p>
     </div>
-    <div class="well col-lg-8 col-lg-offset-2 center">
+    <div class=" col-lg-8 col-lg-offset-2">
       Want highest rated recipe here
     </div>
   </div>
