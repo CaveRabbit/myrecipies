@@ -1,42 +1,51 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<div class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-      
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
-      <a><%=link_to"myRecipies", root_path, class:"btn btn-lg btn-success", id:"logo" %></a>
+      </button>
+      <%=link_to"LookerRecipes", root_path, class:"btn btn-lg", id:"logo" %>
+    </div> <!-- end div class="navbar-header" -->
+      <div class="collapse navbar-collapse">
+        <div class="nav_item">
+          <%=link_to "Recipes", recipes_path, class:"btn btn-default", id:"btn-dark"%>
+        </div>
       
-      <div class="nav_item">
-        <%=link_to "Recipes", recipes_path, class:"btn btn-default btn-success"%>
-      </div>
+        <% if logged_in? %>
+        <div class="nav_item navbar-right">
+          <%=link_to "New Recipe", new_recipe_path, class:"btn btn-default", id:"btn-dark"%>
+        </div>
       
-      <% if logged_in? %>
-      <div class="nav_item">
-        <%=link_to "New Recipe", new_recipe_path, class:"btn btn-default btn-success"%>
-      </div>
-      
-      <ul class="nav_item right-align navbar-right">
-        <li class="dropdown">
-          <%= link_to "#", class: "btn btn-default btn-sucess dropdown-toggle", "data-toggle" => "dropdown" do %>
-          <%= current_user.chefname %> <b class="caret"></b>
-          <% end %>
-          <ul class="dropdown-menu">
-            <li><%=link_to "My Profile", chef_path(current_user) %> </li>
-            <li><%=link_to "Edit Profile", edit_chef_path(current_user) %> </li>
-            <li class="divider"></li>
-            <li><%=link_to "Logout", logout_path %> </li>
-          </ul>
-        </li>
-      </ul>
-      
-      <% else %>
-      <div class="nav_item">
-        <%=link_to "Login", login_path, class:"btn btn-default btn-success"%>
-      </div>
-      
-      <% end %>
+        <ul class="nav_item right-align navbar-right">
+          <li class="dropdown">
+            <%= link_to "#", class: "btn btn-default dropdown-toggle", id:"btn-dark", "data-toggle" => "dropdown" do %>
+            <%= current_user.chefname %> <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li><%=link_to "My Profile", chef_path(current_user) %> </li>
+              <li><%=link_to "Edit Profile", edit_chef_path(current_user) %> </li>
+              <li class="divider"></li>
+              <li><%=link_to "Logout", logout_path %> </li>
+            </ul>
+          </li>
+        </ul>
+        <% else %>
+          <div class="nav_item navbar-right">
+              <div class="btn btn-default", id="btn-dark">
+                <i class="glyphicon glyphicon-log-in"></i><%=link_to "Login", login_path, class:"btn btn-default", id:"btn-dark"%>
+              </div>
+          </div>
+          <div class="nav-item navbar-right">
+            <div class="btn btn-default", id="btn-dark">
+              <i class="glyphicon glyphicon-user"></i> <%= link_to "Sign-Up", login_path, class:"btn btn-default", id:"btn-dark"%>
+            </div>
+            
+          </div>
+        <% end %>
+    </div>
       
     </div>
-</header>
+</div>

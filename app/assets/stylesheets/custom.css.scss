@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar-inverse {
+  background-color: #1F1B2B;
+}
+
 #logo {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -17,6 +21,12 @@
   color: white;
   text-decoration: none;
 }
+
+a:hover {
+  color: none;
+  text-decoration: none;
+}
+
 
 body {
   padding-top: 80px;
@@ -94,4 +104,33 @@ span.picture {
 
 .food {
   size: 10px 10px;
+}
+
+.btn-primary {
+  background-color:#EA8A2F;
+  border-color:#EA8A2F;
+}
+.btn-primary:hover {
+  background-color:#EFA25A;
+  border-color:#EFA25A;
+}
+
+.btn-default {
+  background-color: transparent;
+  border-color:#64518A;
+  color: #64518A;
+}
+.btn-default:hover {
+  background-color:#7D68A6;
+  border-color:#7D68A6;
+  color: #FFFFFF;
+}
+
+#btn-dark {
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.jumbotron {
+  background-color:#57BEBE;
 }
